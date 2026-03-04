@@ -99,6 +99,26 @@ Terraform backend and provider configuration were initialized.
 Terraform plan was executed to preview infrastructure changes before deployment.
 
 ![Terraform Plan](screenshots/03_TERRAFORM_PLAN.png)
+## Application Verification
+
+Once deployment was complete, both services were tested using the Application Load Balancer DNS.
+
+Product Service
+
+http://<ALB-DNS>
+
+Response:
+
+Product Service Running
+
+
+Cart Service
+
+http://<ALB-DNS>/cart
+
+Response:
+
+Cart Service Running
 
 
 ### 4. Terraform Apply
