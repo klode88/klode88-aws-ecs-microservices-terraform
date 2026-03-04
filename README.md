@@ -80,3 +80,29 @@ Key components created:
 ## Deployment Walkthrough
 
 Below is the step-by-step deployment process.
+### 1. Setting Up the Development Environment
+
+Terraform and AWS CLI were configured locally to interact with AWS.
+
+![Setup Environment](screenshots/01_SETUP_ENVIRONMENT.png)
+
+
+### 2. Terraform Initialization
+
+Terraform backend and provider configuration were initialized.
+
+![Terraform Init](screenshots/02_TERRAFORM_INIT.png)
+
+
+### 3. Terraform Plan
+
+Terraform plan was executed to preview infrastructure changes before deployment.
+
+![Terraform Plan](screenshots/03_TERRAFORM_PLAN.png)
+
+
+### 4. Terraform Apply
+
+Infrastructure was deployed to AWS using Terraform.
+
+![Terraform Apply](screenshots/04_TERRAFORM_APPLY.png)
