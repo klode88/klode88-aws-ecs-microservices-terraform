@@ -13,33 +13,7 @@ Both services run as Docker containers deployed on AWS ECS Fargate and are acces
 
 All infrastructure is provisioned using Terraform Infrastructure as Code (IaC).
 
-Architecture Diagram
-                    Users
-                      │
-                      ▼
-        ┌───────────────────────────┐
-        │   Application Load Balancer │
-        └───────────────┬───────────┘
-                        │
-           ┌────────────┴────────────┐
-           │                         │
-           ▼                         ▼
-   Product Service             Cart Service
-   (ECS Fargate)               (ECS Fargate)
-           │                         │
-           └──────────┬──────────────┘
-                      │
-              Private Subnets
-                      │
-                      ▼
-               NAT Gateway
-                (Elastic IP)
-                      │
-                      ▼
-                   Internet
 
-Docker Images stored in:
-Amazon Elastic Container Registry (ECR)
 Architecture Overview
 
 The application runs inside a custom Amazon VPC using a secure multi-tier architecture.
