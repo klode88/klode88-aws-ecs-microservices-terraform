@@ -24,5 +24,5 @@ The ECS service failed health checks because the container port did not match th
 - **08 Load Balancer Routing Misconfiguration**  
 Requests to `/cart` were not routed correctly due to an incorrect path pattern in the ALB listener rule. The routing rule was updated to match `/cart*`.
 
-- **10 ECS Security Group Restriction**  
+- **09 ECS Security Group Restriction**  
 The ECS tasks were not reachable because the security group rules did not allow traffic from the Application Load Balancer. The ECS security group was updated to allow inbound traffic from the ALB security group.
