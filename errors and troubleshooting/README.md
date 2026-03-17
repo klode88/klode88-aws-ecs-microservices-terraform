@@ -6,25 +6,22 @@ Terraform initially failed to create AWS resources because the IAM user did not 
 - **02 Terraform Not Initialized**  
 Terraform commands failed before running `terraform init`. Initializing the project downloaded the required AWS provider plugins and prepared the working directory.
 
-- **03 Incorrect Resource Dependencies**  
-Some infrastructure resources attempted to deploy before others were ready. Terraform dependencies were corrected using proper resource references.
-
-- **04 NAT Gateway Routing Issue**  
+- **03 NAT Gateway Routing Issue**  
 Services inside private subnets could not access the internet because the route table was not configured correctly. The private route table was updated to send internet traffic through the NAT Gateway.
 
-- **05 ALB Listener Priority Conflict**  
+- **04 ALB Listener Priority Conflict**  
 Terraform failed when creating an ALB listener rule because the priority value was already in use. The listener rule priority was updated to a unique value.
 
-- **06 Duplicate Terraform Resource Definitions**  
+- **05 Duplicate Terraform Resource Definitions**  
 Terraform validation failed because the same resource was declared more than once in the configuration. The duplicate resource block was removed.
 
-- **07 Docker Image Not Available in ECR**  
+- **06 Docker Image Not Available in ECR**  
 ECS tasks initially failed to start because the Docker image had not yet been pushed to Amazon ECR. The image was built, tagged, and pushed to the repository.
 
-- **08 Incorrect Container Port Mapping**  
+- **07 Incorrect Container Port Mapping**  
 The ECS service failed health checks because the container port did not match the target group configuration. Both were aligned to use port 80.
 
-- **09 Load Balancer Routing Misconfiguration**  
+- **08 Load Balancer Routing Misconfiguration**  
 Requests to `/cart` were not routed correctly due to an incorrect path pattern in the ALB listener rule. The routing rule was updated to match `/cart*`.
 
 - **10 ECS Security Group Restriction**  
