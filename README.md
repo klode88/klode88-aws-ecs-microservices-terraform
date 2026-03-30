@@ -4,6 +4,22 @@
 
 This project demonstrates how to deploy a **containerized microservices architecture on AWS** using **Terraform, Docker, and Amazon ECS Fargate**.
 
+##  CI/CD Pipeline
+
+This project includes a fully automated GitHub Actions pipeline:
+
+-  Terraform format and validation checks
+-  
+-  Custom Docker-based GitHub Action
+-  
+-  Terraform plan executed against AWS
+-  
+-  Secure authentication using GitHub Secrets
+-  
+-  Runs automatically on every push
+
+👉 View pipeline runs: https://github.com/klode88/online-marketplace-terraform/actions
+
 The application simulates a simplified **online marketplace platform** composed of two independent microservices:
 
 * **Product Service** – handles product catalogue requests
